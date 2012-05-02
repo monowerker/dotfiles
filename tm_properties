@@ -1,0 +1,9 @@
+[ Portfile ]
+
+tabSize = 4
+softTabs = true
+
+[ *.py ]
+
+tabSize = 4
+softTabs = true
