@@ -11,7 +11,7 @@ export ZSH_THEME="monowerker"
 export CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+export DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 #export DISABLE_LS_COLORS="true"
@@ -27,6 +27,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+unalias mv # remove oh-my-zsh alias
+
 setopt AUTO_PUSHD
 setopt AUTO_CD
 setopt EXTENDED_GLOB
@@ -38,6 +40,8 @@ setopt REC_EXACT
 
 export EDITOR=vim
 export VISUAL="mvim -f"
+export MP_EDITOR=mate
+export GIT_EDITOR=vim
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
