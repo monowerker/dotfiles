@@ -1,9 +1,20 @@
-[ Portfile ]
+fontName = "MPW"
+fontSize = 9
 
+[ attr.file.unknown-type ]
+fileType = "text.plain"
+
+[ text ]
+softWrap = true
+
+[ Portfile ]
 tabSize = 4
 softTabs = true
 
 [ *.py ]
-
 tabSize = 4
 softTabs = true
+
+[ *.html ]
+tabSize = 2
+softTabs = false
