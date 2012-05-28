@@ -72,6 +72,10 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 ## TEXTMATE
 
 defaults write com.macromates.TextMate.preview fileBrowserPlacement right
+defaults write com.macromates.TextMate.preview htmlOutputPlacement window
+defaults write com.macromates.TextMate.preview disableAntiAlias -bool YES
+defaults write com.macromates.TextMate.preview fontLeadingDelta -float 0.0
+defaults write com.macromates.TextMate.preview fontAscentDelta -float -1.0
 
 for app in Finder Dock Mail Safari TextMate SystemUIServer; do killall "$app" > /dev/null 2>&1; done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
