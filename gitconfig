@@ -5,3 +5,11 @@
 [core]
 	excludesfile = /Users/deric/._gitignore
 	quotepath = false
+
+[alias]
+	st 	= status
+	ci 	= commit
+	rb 	= rebase
+	sci = svn dcommit
+	srb = svn rebase
+	
