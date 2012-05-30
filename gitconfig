@@ -1,0 +1,7 @@
+[user]
+	name = Daniel Ericsson
+	email = monowerker@gmail.com
+
+[core]
+	excludesfile = /Users/deric/._gitignore
+	quotepath = false
