@@ -21,13 +21,17 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial github vagrant vi-mode osx autojump cloudapp redis-cli textmate ssh-agent python macports)
+plugins=(ssh-agent git ruby rvm github vagrant vi-mode osx autojump rails3 pip terminalapp mysql-macports redis-cli python macports)
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa codebase_rsa github_rsa
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 unalias mv # remove oh-my-zsh alias
+unalias mkdir # remove oh-my-zsh alias
 
 setopt AUTO_PUSHD
 setopt AUTO_CD
@@ -40,10 +44,11 @@ setopt REC_EXACT
 
 export EDITOR=vim
 export VISUAL="mvim -f"
-export MP_EDITOR=mate
+export MP_EDITOR=subl
 export GIT_EDITOR=vim
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
+export NODE_PATH="/opt/local/lib/node_modules"
 
 if [[ -x vim ]]; then
     export EDITOR='vim'
@@ -55,6 +60,8 @@ alias ls='ls -G'
 alias sudo='A=`alias` sudo '
 alias ipy='ipython'
 alias ppj='python -mjson.tool'
+alias sub='subl'
+alias bp='bpython'
 
 autoload -Uz compinit
 compinit
@@ -62,3 +69,5 @@ zstyle ':completion:*' special-dirs true
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+
+ssh-add $HOME/.ssh/*_rsa
