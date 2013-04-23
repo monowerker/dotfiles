@@ -1,0 +1,69 @@
+{
+	"auto_complete_delay": 450,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Color Scheme - Default/Tomorrow-Night-Eighties.tmTheme",
+	"draw_indent_guides": false,
+	"draw_white_space": "none",
+	"file_exclude_patterns":
+	[
+		".gitignore",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		".gitkeep"
+	],
+	"fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
+	"font_face": "MPW",
+	"font_options":
+	[
+		"bold",
+		"no_antialias"
+	],
+	"font_size": 9.0,
+	"gutter": true,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_numbers": true,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"margin": 0,
+	"match_brackets": false,
+	"match_selection": true,
+	"remember_open_files": false,
+	"rulers":
+	[
+		120
+	],
+	"show_full_path": true,
+	"soda_classic_tabs": false,
+	"theme": "Soda Light.sublime-theme"
+}
