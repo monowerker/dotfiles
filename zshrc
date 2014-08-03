@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/Dropbox/Projects/oh-my-zsh
+export ZSH=$HOME/Projects/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -21,7 +21,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ssh-agent git ruby rvm github vagrant vi-mode osx autojump rails3 pip terminalapp mysql-macports redis-cli python macports)
+plugins=(ssh-agent git github vi-mode osx autojump terminalapp macports)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa codebase_rsa github_rsa
@@ -49,6 +49,9 @@ export GIT_EDITOR=vim
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export NODE_PATH="/opt/local/lib/node_modules"
+export GOPATH="/Users/deric/go"
+export CDPATH=.:~/Dropbox/Projects
+export GOROOT=$HOME/go
 
 if [[ -x vim ]]; then
     export EDITOR='vim'
@@ -65,9 +68,35 @@ alias bp='bpython'
 
 autoload -Uz compinit
 compinit
-zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' special-dirs true 
+
+# http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+
+export MARKPATH=$HOME/.marks
+function jump { 
+    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+
+function mark { 
+    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+
+function unmark { 
+    rm -i "$MARKPATH/$1"
+}
+
+function marks {
+    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-ssh-add $HOME/.ssh/*_rsa
+#ssh-add -K $HOME/.ssh/*_rsa
