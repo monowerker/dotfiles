@@ -1,69 +1,34 @@
 {
-	"auto_complete_delay": 450,
+	"auto_indent": true,
+	"auto_match_enabled": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Color Scheme - Default/Tomorrow-Night-Eighties.tmTheme",
+	"caret_style": "blink",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
 	"draw_indent_guides": false,
 	"draw_white_space": "none",
-	"file_exclude_patterns":
-	[
-		".gitignore",
-		"*.pyc",
-		"*.pyo",
-		"*.exe",
-		"*.dll",
-		"*.obj",
-		"*.o",
-		"*.a",
-		"*.lib",
-		"*.so",
-		"*.dylib",
-		"*.ncb",
-		"*.sdf",
-		"*.suo",
-		"*.pdb",
-		"*.idb",
-		".DS_Store",
-		"*.class",
-		"*.psd",
-		"*.db",
-		".gitkeep"
-	],
 	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
-		".svn",
-		".git",
-		".hg",
-		"CVS",
 		"node_modules"
 	],
-	"font_face": "MPW",
-	"font_options":
-	[
-		"bold",
-		"no_antialias"
-	],
-	"font_size": 9.0,
-	"gutter": true,
+	"font_face": "Liberation Mono",
+	"font_size": 13,
 	"highlight_line": true,
-	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"Theme - Sodarized",
+		"JavaScript",
 		"Vintage"
 	],
-	"line_numbers": true,
-	"line_padding_bottom": 0,
-	"line_padding_top": 0,
-	"margin": 0,
-	"match_brackets": false,
-	"match_selection": true,
-	"remember_open_files": false,
+	"open_files_in_new_window": false,
 	"rulers":
 	[
-		120
+		100
 	],
-	"show_full_path": true,
-	"soda_classic_tabs": false,
-	"theme": "Soda Light.sublime-theme"
+	"smart_indent": true,
+	"soda_classic_tabs": true,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true
 }
