@@ -1,32 +1,21 @@
 [user]
 	name = monowerker
 	email = monowerker@gmail.com
-
-[core]
-	excludesfile = /Users/deric/._gitignore
-	quotepath = false
-
-[alias]
-	st 	= status
-	ci 	= commit
-	rb 	= rebase
-	br	= branch
-	co	= checkout
-	sci = svn dcommit
-	srb = svn rebase
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 [mergetool]
-	prompt = false
-[merge]
-	tool = Kaleidoscope
+	keepBackup = true
+[core]
+	quotepath = false
+	excludesfile = /Users/deric/.gitignore
+	trustctime = false
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	rb = rebase
 [rerere]
 	enabled = true
+	autoupdate = true
+[diff]
+	tool = opendiff
+[merge]
+	tool = opendiff
