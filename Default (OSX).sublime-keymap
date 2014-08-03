@@ -1,6 +1,8 @@
 [
+	{ "keys": ["shift+super+7"], "command": "toggle_comment", "args": { "block": false } },
 	{ "keys": ["§"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["alt+tab"], "command": "indent" },
 	{ "keys": ["alt+shift+tab"], "command": "unindent" },
-	{ "keys": ["alt+super+enter"], "command": "semicolon" }
+	//{ "keys": ["shift+super+,"], "command": "semicolon" },
+	{ "keys": ["shift+super+'"], "command": "reindent" }
 ]
