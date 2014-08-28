@@ -51,7 +51,6 @@ export LANG="en_US.UTF-8"
 export NODE_PATH="/opt/local/lib/node_modules"
 export GOPATH="/Users/deric/go"
 export CDPATH=.:~/Dropbox/Projects
-export GOROOT=$HOME/go
 
 if [[ -x vim ]]; then
     export EDITOR='vim'
